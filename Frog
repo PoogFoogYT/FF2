@@ -1,12 +1,712 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.2.5) ~  Much Love, Ferib 
-
-]]--
-
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v8,v9)local v29={};for v131=1, #v8 do v6(v29,v0(v4(v1(v2(v8,v131,v131 + 1 )),v1(v2(v9,1 + ((v131-1)% #v9) ,1 + ((v131-1)% #v9) + 1 )))%256 ));end return v5(v29);end local v10=loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Rayfield/main/source"))();local v11=v10:CreateWindow({Name="FF2 script",LoadingTitle="POOG FOOG YT",LoadingSubtitle="by Poog Foog",ConfigurationSaving={Enabled=true,FolderName=Poog,FileName="Poog hub"},Discord={Enabled=false,Invite="noinvitelink",RememberJoins=true},KeySystem=false,KeySettings={Title="Sirius Hub",Subtitle="Key System",Note="Join the discord (discord.gg/sirius)",FileName="SiriusKey",SaveKey=true,GrabKeyFromSite=false,Key="Hello"}});local v12=v11:CreateTab("Main",4483364334 -(360 + 1516) );local v13=v12:CreateSection("Main");local v14=v11:CreateTab("Visuals",4483362458);local v15=v14:CreateSection("Visuals");local v16=v11:CreateTab("Player",5640643100 -1157280642 );local v17=v16:CreateSection("Player");local v18=v11:CreateTab("Anims",4483364069 -(695 + 916) );local v19=v18:CreateSection("Anims");local v21=v12:CreateButton({Name="Mags",Callback=function(v20)local v31=v12:CreateSlider({Name="Mags",Range={0 -0 ,1738 -(1324 + 384) },Increment=1 -0 ,Suffix="Range",CurrentValue=23 + 7 ,Flag="Slider1",Callback=function(v30)local v132=game:GetService("Players").LocalPlayer;local v133=game:GetService("RunService").Stepped;local v134=game:GetService("UserInputService");local v135=game:GetService("GuiService");local v136=120 -90 ;local v137=nil;local v138=false;v137=v137 and (v137 + v136) ;local v139=math.huge;local v140=workspace;local v141=firetouchinterest;local v142=game.FindFirstChild;local v143=game.FindFirstChildOfClass;local v144=task;local v145=v133.Connect;local v146=v133.Wait;local v147=keypress;local v148=keyrelease;local v149=v134.GetFocusedTextBox;local v150=pairs;local v151={"CatchRight","CatchLeft"};local function v152(v153,v154)local v305,v306=v139,nil;for v333,v334 in v150(v151) do local v335=v142(v154,v334);local v336=(v335 and (v335.Position-v153.Position).Magnitude) or v139 ;if (v336<v305) then local v411=0;while true do if (v411==(0 + 0)) then v305=v336;v306=v335;break;end end end end return v305,v306;end local function v155(v156,v157,v158)local v307=0;local v308;local v309;while true do if (v307==0) then v308=896 -(568 + 328) ;v158=v158 or v139 ;v307=270 -(186 + 83) ;end if (v307==(1 + 1)) then return v309;end if (v307==1) then v309=v143(v156,v157);while  not v309 and (v308<v158)  do v308=v308 + v144.wait() ;v309=v143(v156,v157);if v309 then return v309;end end v307=2;end end end v145(v135.MenuOpened,function()v138=true;end);v145(v135.MenuClosed,function()v138=false;end);v145(v140.ChildAdded,function(v153)if ((v153.Name=="Football") and v155(v153,"TouchTransmitter",3)) then local v365=v132.Character;while (v153.Parent==v140) and v365  do local v412=0;local v413;local v414;while true do if (v412==(3 -2)) then v146(v133);break;end if (v412==(0 -0)) then v413,v414=v152(v153,v365);if v414 then local v459=0 -0 ;while true do if (v459==(0 -0)) then if (v137 and (v413<=v137) and  not (v149(v134) or v138)) then local v511=0 + 0 ;while true do if ((0 + 0)==v511) then v147(44 + 23 );v148(67);break;end end end if (v413<=v136) then v141(v414,v153,1);v141(v414,v153,0 -0 );end break;end end end v412=1 + 0 ;end end end end end);end});end});local v21=v12:CreateButton({Name="Auto Hands",Callback=function()local v33=v12:CreateSlider({Name="Distance of Auto hands",Range={838 -(91 + 747) ,635 -(62 + 553) },Increment=0.1 + 0 ,Suffix="Distance",CurrentValue=20,Flag="Slider1",Callback=function(v32)local v159=game:GetService("Players").LocalPlayer;local v160=game:GetService("RunService").Stepped;local v161=game:GetService("UserInputService");local v162=game:GetService("GuiService");local v163=80 -50 ;local v164=20 + 0 ;local v165=false;v164=v164;local v166=math.huge;local v167=workspace;local v168=firetouchinterest;local v169=game.FindFirstChild;local v170=game.FindFirstChildOfClass;local v171=task;local v172=v160.Connect;local v173=v160.Wait;local v174=keypress;local v175=keyrelease;local v176=v161.GetFocusedTextBox;local v177=pairs;local v178={"CatchRight","CatchLeft"};local function v179(v180,v181)local v310=0;local v311;local v312;while true do if (v310==(0 -0)) then v311,v312=v166,nil;for v422,v423 in v177(v178) do local v424=v169(v181,v423);local v425=(v424 and (v424.Position-v180.Position).Magnitude) or v166 ;if (v425<v311) then v311=v425;v312=v424;end end v310=1659 -(1204 + 454) ;end if (v310==(1 + 0)) then return v311,v312;end end end local function v182(v183,v184,v185)local v313=0;local v314;local v315;while true do if (v313==(3 -2)) then v315=v170(v183,v184);while  not v315 and (v314<v185)  do v314=v314 + v171.wait() ;v315=v170(v183,v184);if v315 then return v315;end end v313=368 -(350 + 16) ;end if (v313==0) then v314=0;v185=v185 or v166 ;v313=1;end if (v313==(6 -4)) then return v315;end end end v172(v162.MenuOpened,function()v165=true;end);v172(v162.MenuClosed,function()v165=false;end);v172(v167.ChildAdded,function(v180)if ((v180.Name=="Football") and v182(v180,"TouchTransmitter",2 + 1 )) then local v366=v159.Character;while (v180.Parent==v167) and v366  do local v415,v416=v179(v180,v366);if v416 then if (v164 and (v415<=v164) and  not (v176(v161) or v165)) then v174(12 + 55 );wait(0.8);v175(246 -(35 + 144) );end if (v415<=v163) then local v456=0;while true do if (v456==(230 -(93 + 137))) then v168(v416,v180,1066 -(4 + 1061) );v168(v416,v180,0);break;end end end end v173(v160);end end end);end});end});local v22=v14:CreateButton({Name="Ball predictions",Callback=function()local v34={};v34.Marker=Instance.new("Part");v34.Marker.Anchored=true;v34.Marker.Transparency=0.8;v34.Marker.Color=Color3.fromRGB(522 -(120 + 147) ,0 + 0 ,45 + 210 );v34.Marker.CanCollide=false;v34.Marker.Name="Marker";v34.Params=RaycastParams.new();v34.Params.IgnoreWater=true;v34.Params.FilterType=Enum.RaycastFilterType.Whitelist;v34.CastStep=(1688 -(201 + 1484))/(31 + 29) ;v34.LastSavedPower=202 -142 ;v34[v7("\36\191\101\1\218\82\75\240\7\187\115\46\208\77","\99\218\17\66\181\62\39\153")]=function(v47)local v186={};for v316,v317 in ipairs(workspace:GetDescendants()) do if (v317:IsA("BasePart") and (v317.CanCollide==true)) then table.insert(v186,v317);end end return v186;end;v34[v7("\209\61\39\197\117\209\90\237\49\37\211","\134\84\87\160\56\176\40")]=function(v47)for v318,v319 in pairs(workspace:GetChildren()) do if (v319.Name=="Marker") then v319:Destroy();end end end;v34[v7("\230\71\207\49\33\181\126\120\207\69","\161\34\187\125\64\219\26\17")]=function(v47,v50,v51,v52)local v187=0 + 0 ;local v188=v50;v47.Params.FilterDescendantsInstances=v47:GetCollidables();local v190;if v52 then v190=Instance.new("Highlight",game.CoreGui);v190.Adornee=v52;v190.DepthMode=Enum.HighlightDepthMode.AlwaysOnTop;v190.Enabled=true;end while true do v187+=v34.CastStep local v320=(v50 + (v51 * v187)) -Vector3.new(0,0.5 * (178 -(45 + 105)) * (v187^2) ,1754 -(30 + 1724) ) ;local v321=v47.Marker:Clone();v321.Parent=workspace;v321.Position=v320;if ((v52 and v190 and (v52.Parent~=workspace)) or (v52 and  not v52:FindFirstChildOfClass("BodyForce"))) then v190:Destroy();v47:WipeMarkers();break;end task.wait();end end;do workspace.ChildAdded:Connect(function(v191)if ((v191.Name=="Football") and v191:IsA("BasePart")) then local v367=0;local v368;while true do if (v367==0) then v368=nil;v368=v191:GetPropertyChangedSignal("Velocity"):Connect(function()local v448=0 + 0 ;while true do if (v448==(425 -(139 + 286))) then v34:GetLanding(v191.Position,v191.Velocity,v191);v368:Disconnect();break;end end end);break;end end end end);end return v34;end});local v22=v14:CreateButton({Name="Fps boost",Callback=function()local v54=true;local v55=game;local v56=v55.Workspace;local v57=v55.Lighting;local v58=v56.Terrain;v58.WaterWaveSize=0;v58.WaterWaveSpeed=0;v58.WaterReflectance=0 + 0 ;v58.WaterTransparency=1895 -(1042 + 853) ;v57.GlobalShadows=false;v57.FogEnd=8999999488;v57.Brightness=622 -(348 + 274) ;settings().Rendering.QualityLevel="Level01";for v192,v193 in pairs(v55:GetDescendants()) do if (v193:IsA("Part") or v193:IsA("Union") or v193:IsA("CornerWedgePart") or v193:IsA("TrussPart")) then v193.Material="Plastic";v193.Reflectance=1009 -(606 + 403) ;elseif (v193:IsA("Decal") or (v193:IsA("Texture") and v54)) then v193.Transparency=1;elseif (v193:IsA("ParticleEmitter") or v193:IsA("Trail")) then v193.Lifetime=NumberRange.new(0 -0 );elseif v193:IsA("Explosion") then local v457=903 -(863 + 40) ;while true do if (v457==(0 + 0)) then v193.BlastPressure=1386 -(1029 + 356) ;v193.BlastRadius=451 -(291 + 159) ;break;end end elseif (v193:IsA("Fire") or v193:IsA("SpotLight") or v193:IsA("Smoke")) then v193.Enabled=false;elseif v193:IsA("MeshPart") then local v472=0;while true do if (v472==(1769 -(52 + 1716))) then v193.TextureID=10385902758730850 -(735 + 1159) ;break;end if (v472==(1198 -(691 + 507))) then v193.Material="Plastic";v193.Reflectance=0 -0 ;v472=1;end end end end for v194,v195 in pairs(v57:GetChildren()) do if (v195:IsA("BlurEffect") or v195:IsA("SunRaysEffect") or v195:IsA("ColorCorrectionEffect") or v195:IsA("BloomEffect") or v195:IsA("DepthOfFieldEffect")) then v195.Enabled=false;end end end});local v22=v14:CreateButton({Name="Skeletons",Callback=function()local v67=0 -0 ;local v68;local v69;local v70;local v71;local v72;local v73;local v74;while true do if (v67==(385 -(186 + 199))) then game:GetService("StarterGui"):SetCore("SendNotification",{Title="Made By:",Text="Poog Foog",Icon="",Duration=75 -55 });v68=workspace.CurrentCamera;v69=game:GetService("Players");v67=1 + 0 ;end if (v67==(7 -5)) then v73=nil;v73=function(v345,v346)local v369=0 -0 ;local v370;local v371;local v372;local v373;local v374;local v375;local v376;while true do if (v369==0) then v370=Drawing.new("Line");v370.Visible=false;v370.Thickness=3;v370.Color=Color3.new(0 -0 ,0,0);v369=1;end if (4==v369) then v374=Drawing.new("Line");v374.Visible=false;v374.Thickness=3;v374.Color=Color3.new(0 -0 ,0 -0 ,0);v369=10 -5 ;end if (v369==(1 -0)) then v371=Drawing.new("Line");v371.Visible=false;v371.Thickness=1396 -(868 + 525) ;v371.Color=Color3.new(89 -(29 + 60) ,0,0 + 0 );v369=2 + 0 ;end if (v369==5) then v375=Drawing.new("Line");v375.Visible=false;v375.Thickness=3 + 0 ;v375.Color=Color3.new(0 + 0 ,0,0 -0 );v369=26 -20 ;end if (v369==(1208 -(1030 + 172))) then v376=nil;v376=function()local v449;v449=v71.RenderStepped:Connect(function()if (workspace:FindFirstChild(v346.Name) and v346 and v346:FindFirstChild("HumanoidRootPart") and v346:FindFirstChild("Humanoid") and (v346:FindFirstChild("Humanoid").Health~=(0 + 0))) then local v465=v346.HumanoidRootPart.Position;local v466,v467=v68:WorldToViewportPoint(v465);if (v467 and (v346.Humanoid.RigType==Enum.HumanoidRigType.R6) and v72.enabled) then local v473=v68:WorldToViewportPoint(v346.Head.Position);local v474=v68:WorldToViewportPoint(v346.Torso.Position + Vector3.new(1437 -(1383 + 54) ,1 -0 ,0 -0 ) );local v475=v68:WorldToViewportPoint(v346.Torso.Position + Vector3.new(0 -0 , -(562 -(246 + 315)),1175 -(576 + 599) ) );local v476=v68:WorldToViewportPoint(v346["Left Arm"].Position + Vector3.new(1082 -(1007 + 75) , -(1 + 0),0) );local v477=v68:WorldToViewportPoint(v346["Right Arm"].Position + Vector3.new(222 -(106 + 116) , -1,0) );local v478=v68:WorldToViewportPoint(v346["Left Leg"].Position + Vector3.new(1003 -(201 + 802) , -(1 + 0),0 -0 ) );local v479=v68:WorldToViewportPoint(v346["Right Leg"].Position + Vector3.new(0 + 0 , -1,0 + 0 ) );v370.From=Vector2.new(v473.X,v473.Y);v370.To=Vector2.new(v474.X,v474.Y);v371.From=Vector2.new(v474.X,v474.Y);v371.To=Vector2.new(v475.X,v475.Y);v372.From=Vector2.new(v474.X,v474.Y);v372.To=Vector2.new(v476.X,v476.Y);v373.From=Vector2.new(v474.X,v474.Y);v373.To=Vector2.new(v477.X,v477.Y);v374.From=Vector2.new(v475.X,v475.Y);v374.To=Vector2.new(v478.X,v478.Y);v375.From=Vector2.new(v475.X,v475.Y);v375.To=Vector2.new(v479.X,v479.Y);v370.Visible=v72.skel;v371.Visible=v72.skel;v372.Visible=v72.skel;v373.Visible=v72.skel;v374.Visible=v72.skel;v375.Visible=v72.skel;else v370.Visible=false;v371.Visible=false;v372.Visible=false;v373.Visible=false;v374.Visible=false;v375.Visible=false;end else local v468=182 -(113 + 69) ;while true do if ((3 + 0)==v468) then v375.Visible=false;break;end if (v468==2) then v373.Visible=false;v374.Visible=false;v468=23 -(19 + 1) ;end if (v468==1) then v371.Visible=false;v372.Visible=false;v468=6 -4 ;end if (v468==0) then if (v345==nil) then local v515=0 -0 ;while true do if (v515==(0 -0)) then v449:Disconnect();v449=nil;break;end end end v370.Visible=false;v468=1 + 0 ;end end end end);end;coroutine.wrap(v376)();break;end if (v369==(5 -2)) then v373=Drawing.new("Line");v373.Visible=false;v373.Thickness=2 + 1 ;v373.Color=Color3.new(0 + 0 ,0 -0 ,1845 -(890 + 955) );v369=4;end if (v369==(3 -1)) then v372=Drawing.new("Line");v372.Visible=false;v372.Thickness=3;v372.Color=Color3.new(0 -0 ,0 -0 ,0);v369=932 -(72 + 857) ;end end end;v74=nil;v67=869 -(841 + 25) ;end if ((2 -1)==v67) then v70=v69.LocalPlayer;v71=game:GetService("RunService");v72={enabled=true,skel=true,skel_col=Color3.fromRGB(500 -(25 + 271) ,1813 -(1510 + 303) ,204)};v67=1244 -(398 + 844) ;end if (v67==(1 + 2)) then v74=function(v348)local v377=1392 -(817 + 575) ;while true do if (v377==0) then if v348.Character then coroutine.wrap(v73)(v348,v348.Character);end v348.CharacterAdded:Connect(function(v445)coroutine.wrap(v73)(v348,v445);end);break;end end end;for v378,v379 in next,v69:GetPlayers() do if (v379~=v70) then v74(v379);end end v69.PlayerAdded:Connect(v74);break;end end end});local v24=v14:CreateToggle({Name="Qb Football Trajectory",CurrentValue=false,Flag="Toggle1",Callback=function(v23)local v75=game.Workspace.Terrain;local v76=Instance.new("Beam");v76.Color=ColorSequence.new(Color3.new(1,0 + 0 ,1140 -(479 + 660) ));v76.Transparency=NumberSequence.new(0);v76.FaceCamera=true;v76.Segments=20;v76.Width0=0.4 + 0 ;v76.Width1=0.4 -0 ;local v83={};v83.__index=v83;local function v85(v86,v87)return ( -(7 -5) * v86:Dot(v87) * v87) + v86 ;end local function v88(v89,v90,v91,v92)local v196=0;local v197;local v198;local v199;local v200;local v201;local v202;local v203;local v204;local v205;local v206;local v207;local v208;local v209;local v210;local v211;local v212;while true do if (v196==0) then v197=0.5 * (0.5 -0) * (0.5 + 0) ;v198=((1913.5 -(1558 + 355)) * v89 * v92 * v92) + (v90 * v92) + v91 ;v199=v198-(((v89 * v92 * v92) + (v90 * v92))/3) ;v200=((((v197 * v89 * v92 * v92) + ((1638.5 -(1616 + 22)) * v90 * v92) + v91) -(v197 * (v91 + v198)))/(3 * v197)) -v199 ;v196=1 -0 ;end if (v196==(4 + 1)) then v211.Parent=v75;v212.Attachment0=v210;v212.Attachment1=v211;v212.CurveSize0=v201;v196=1769 -(1252 + 511) ;end if (v196==(1316 -(680 + 635))) then v201=(v200-v91).Magnitude;v202=(v199-v198).Magnitude;v203=(v91-v198).unit;v204=(v200-v91).unit;v196=2;end if ((99 -(50 + 46))==v196) then v208=CFrame.fromMatrix(v91,v204,v205,v203);v209=CFrame.fromMatrix(v198,v206,v207,v203);v210=Instance.new("Attachment");v211=Instance.new("Attachment");v196=3 + 1 ;end if (v196==6) then v212.CurveSize1= -v202;v212.Parent=v75;break;end if (v196==(8 -4)) then v212=v76:Clone();v210.CFrame=v208;v210.Parent=v75;v211.CFrame=v209;v196=5;end if (v196==(242 -(117 + 123))) then v205=v204:Cross(v203).unit;v206=(v199-v198).unit;v207=v206:Cross(v203).unit;v203=v205:Cross(v204).unit;v196=784 -(340 + 441) ;end end end local v83={};v83.__index=v83;local function v85(v86,v87)return ( -(2 + 0) * v86:Dot(v87) * v87) + v86 ;end local function v88(v89,v90,v91,v92)local v213=(504.5 -(204 + 300)) * (1496.5 -(633 + 863)) * (0.5 + 0) ;local v214=(0.5 * v89 * v92 * v92) + (v90 * v92) + v91 ;local v215=v214-(((v89 * v92 * v92) + (v90 * v92))/(1 + 2)) ;local v216=((((v213 * v89 * v92 * v92) + ((409.5 -(141 + 268)) * v90 * v92) + v91) -(v213 * (v91 + v214)))/((1698 -(1268 + 427)) * v213)) -v215 ;local v217=(v216-v91).Magnitude;local v218=(v215-v214).Magnitude;local v219=(v91-v214).unit;local v220=(v216-v91).unit;local v221=v220:Cross(v219).unit;local v222=(v215-v214).unit;local v223=v222:Cross(v219).unit;v219=v221:Cross(v220).unit;local v225=CFrame.fromMatrix(v91,v220,v221,v219);local v226=CFrame.fromMatrix(v214,v222,v223,v219);local v227=Instance.new("Attachment");local v228=Instance.new("Attachment");local v229=v76:Clone();v227.CFrame=v225;v227.Parent=v75;v228.CFrame=v226;v228.Parent=v75;v229.Attachment0=v227;v229.Attachment1=v228;v229.CurveSize0=v217;v229.CurveSize1= -v218;v229.Parent=v75;end v83[v7("\61\213\148","\83\176\227\22\171\121\217")]=function(v93)local v239=1673 -(1561 + 112) ;local v240;while true do if (v239==1) then v240.TimeStep=0.1 + 0 ;v240.MaxTime=3;v239=7 -5 ;end if (v239==(0 -0)) then v240=setmetatable({},v83);v240.Gravity=v93;v239=1;end if ((7 -5)==v239) then v240.MinSpeed=12 + 3 ;v240.MaxBounce=0 -0 ;v239=5 -2 ;end if ((4 -1)==v239) then return v240;end end end;v83[v7("\51\1\205\112\219\203\17\29","\101\100\161\31\184\162")]=function(v95,v90,v92)return (v95.Gravity * v92) + v90 ;end;v83[v7("\159\192\30\112\191\166\192\3","\207\175\109\25\203")]=function(v95,v91,v90,v92)return ((0.5 + 0) * v95.Gravity * v92 * v92) + (v90 * v92) + v91 ;end;v83[v7("\189\223\199\52\83\185\18\140\215\212\59\66\129\4\164\221\210\63\68\155\2\142\199\207\53\88","\237\179\166\90\54\232\103")]=function(v95,v91,v90,v98,v87)local v241=((0.5 + 0) * v95.Gravity):Dot(v87);local v242=v90:Dot(v87);local v243=(v91-v98):Dot(v87);if (v241~=0) then local v349=0;local v350;while true do if (v349==0) then v350=math.sqrt((v242 * v242) -((2 + 2) * v241 * v243) );return ( -v242-v350)/((2 + 0) * v241) ;end end else return  -v243/v242 ;end end;v83[v7("\140\186\79\200\186\183\66\223\170\136\74\197\168\183\70","\207\219\35\171")]=function(v95,v91,v90,v100)local v244=0;local v245,v246,v247,v248;repeat local v324=1167 -(431 + 736) ;local v325;local v326;local v327;while true do if (v324==(1 -0)) then v244=v244 + v95.TimeStep ;v327=Ray.new(v325,v326-v325 );v324=2 -0 ;end if ((0 + 0)==v324) then v325=v95:Position(v91,v90,v244);v326=v95:Position(v91,v90,v244 + v95.TimeStep );v324=1 + 0 ;end if (v324==(4 -2)) then v245,v246,v247,v248=game.Workspace:FindPartOnRayWithIgnoreList(v327,v100,false,true);break;end end until v245 or (v244>=v95.MaxTime)  if v245 then local v351=0;local v352;local v353;while true do if (v351==1) then v353=v95:Position(v91,v90,v352);return v352,v247,PhysicalProperties.new(v248);end if (v351==0) then if ((v245.CanCollide==false) and  not table.find(v100,v245)) then table.insert(v100,v245);end v352=v95:PlaneQuadraticIntersection(v91,v90,v246,v247);v351=1;end end end end;v83[v7("\207\117\239\71","\140\20\156\51")]=function(v95,v91,v90,v102,v100)local v249=584 -(296 + 288) ;local v250;local v251;local v252;local v253;local v254;local v255;local v256;local v257;while true do if ((10 -7)==v249) then return v257;end if (v249==(2 -1)) then v255=v95.MinSpeed * v95.MinSpeed ;v256=PhysicalProperties.new(v102);v249=2;end if (v249==2) then v257={};while (v90:Dot(v90)>=v255) and (v250<=v95.MaxBounce)  do local v418=0 -0 ;while true do if (v418==0) then v251,v253,v254=v95:CalculateSingle(v91,v90,v100);if v251 then local v460=1185 -(630 + 555) ;local v461;local v462;local v463;while true do if (v460==0) then table.insert(v257,{v91,v90,v251});v461=((v256.Elasticity * v256.ElasticityWeight) + (v254.Elasticity * v254.ElasticityWeight))/(v256.ElasticityWeight + v254.ElasticityWeight) ;v460=1;end if (v460==(1309 -(245 + 1062))) then print(v463);v91=v95:Position(v91,v90,v251);v460=3 + 0 ;end if (v460==(2 + 1)) then v90=(v85(v95:Velocity(v90,v251),v253) * v461) + (v90 * v462 * v463) ;v250=v250 + 1 + 0 ;break;end if (v460==1) then v462=((v256.Friction * v256.FrictionWeight) + (v254.Friction * v254.FrictionWeight))/(v256.FrictionWeight + v254.FrictionWeight) ;v463=(1402 -(614 + 787)) -math.abs(v90.Unit:Dot(v253)) ;v460=1 + 1 ;end end else v250=v95.MaxBounce + 1 ;end break;end end end v249=1272 -(242 + 1027) ;end if (v249==(0 + 0)) then v250=0;v251,v252,v253,v254=nil;v249=1 + 0 ;end end end;v83[v7("\56\110\168\255","\124\28\201\136\225\121\59")]=function(v95,v104)for v328=2 -1 , #v104 do local v329=0 -0 ;local v330;local v331;local v332;while true do if (v329==(0 -0)) then v330,v331,v332=unpack(v104[v328]);v88(v95.Gravity,v331,v330,v332);break;end end end end;local v106=game:GetService("Players").LocalPlayer;local v107=v83.new(Vector3.new(0, -(1141.5 -(798 + 315)),0 + 0 ));local v108=v106.Character:WaitForChild("Head");local v109=v106:GetMouse();local v100={game.Workspace.Terrain,v106.Character};local v110=false;game:GetService("RunService").RenderStepped:Connect(function(v111)if  not v110 then local v354=0 + 0 ;while true do if (v354==(483 -(127 + 356))) then game.Workspace.Terrain:ClearAllChildren();if v106.Character:FindFirstChild("Football") then local v450=0 + 0 ;local v451;local v452;local v453;local v454;local v455;while true do if (v450==(0 -0)) then v451=(v106.PlayerGui:FindFirstChild("BallGui") and tonumber(v106.PlayerGui.BallGui.Frame.Disp.Text)) or (60 + 0) ;v452=(v109.Hit.p-(v108.CFrame + Vector3.new(0 -0 ,1506 -(920 + 585) ,0 -0 )).p).Unit;v450=1 -0 ;end if (v450==(1 -0)) then v453=v108.Position + (v452 * (7 -5)) ;v454=v452 * v451 ;v450=2;end if (v450==(2 + 0)) then v455=v107:Cast(v453,v454,Enum.Material.Plastic,v100);v107:Draw(v455);break;end end end break;end end end end);game:GetService("UserInputService").InputBegan:Connect(function(v112)if ((v112.UserInputType==Enum.UserInputType.MouseButton1) and  not v110) then local v355=0 + 0 ;while true do if (v355==(0 -0)) then v110=true;task.delay(3,function()v110=false;end);break;end end end end);end});local v26=v16:CreateToggle({Name="inf jump (banable)",CurrentValue=false,Flag="Toggle1",Callback=function(v25)local v113=0 + 0 ;local v114;local v115;local v116;local v117;local v118;local v119;local v120;local v121;while true do if (2==v113) then v119=0.0174533 -0 ;v120=nil;v25=function(v356,v357,v358)if (v357==Enum.UserInputState.Begin) then repeat v118.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Seated");wait();v118.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping");until true end end;v113=3;end if (v113==(0 + 0)) then wait(1);v114="2.00";v115="Poog Hub infjump";v113=1 + 0 ;end if (5==v113) then v121.SoundId="rbxassetid://170765130";v121.PlayOnRemove=true;v121:Destroy();v113=18 -12 ;end if (v113==4) then v121=Instance.new("Sound",workspace);v121.PlaybackSpeed=985.5 -(594 + 390) ;v121.Volume=663.15 -(651 + 12) ;v113=804 -(139 + 660) ;end if (v113==6) then game.StarterGui:SetCore("SendNotification",{Title="Poog Hub",Text="Poog foog inf jump loaded ",Icon="rbxassetid://505845268",Duration=1232 -(80 + 352) ,Button1="Okay"});break;end if (v113==3) then v117:BindAction("zeezyAirjump",v25,false,v116);print(v115   .. " "   .. v114   .. " loaded successfully" );print("made by frog#8472");v113=393 -(196 + 193) ;end if (v113==(3 -2)) then v116=Enum.KeyCode.Space;v117=game:GetService("ContextActionService");v118=game:GetService("Players").LocalPlayer;v113=1 + 1 ;end end end});local v27=v18:CreateButton({Name="Fake Kick",Callback=function()for v258,v259 in pairs(game.Players:GetPlayers()) do local v260=0 + 0 ;local v261;local v262;while true do if (0==v260) then AnimationId="3695538622";v261=Instance.new("Animation");v260=1936 -(1774 + 161) ;end if (v260==1) then v261.AnimationId="rbxassetid://"   .. AnimationId ;v262=game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(v261);v260=7 -5 ;end if (v260==(1 + 1)) then v262:Play();v262:AdjustSpeed(1 + 0 );break;end end end end});local v27=v18:CreateButton({Name="Fake Pass",Callback=function()for v263,v264 in pairs(game.Players:GetPlayers()) do local v265=0 + 0 ;local v266;local v267;while true do if (v265==(0 + 0)) then AnimationId="3695532114";v266=Instance.new("Animation");v265=1 + 0 ;end if (v265==(1 -0)) then v266.AnimationId="rbxassetid://"   .. AnimationId ;v267=game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(v266);v265=2;end if (v265==2) then v267:Play();v267:AdjustSpeed(1);break;end end end end});local v27=v18:CreateButton({Name="Fake Dab",Callback=function()for v268,v269 in pairs(game.Players:GetPlayers()) do local v270=682 -(565 + 117) ;local v271;local v272;while true do if (0==v270) then AnimationId="3695549792";v271=Instance.new("Animation");v270=2 -1 ;end if (v270==(1303 -(205 + 1097))) then v271.AnimationId="rbxassetid://"   .. AnimationId ;v272=game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(v271);v270=1902 -(1027 + 873) ;end if (v270==(1 + 1)) then v272:Play();v272:AdjustSpeed(1 -0 );break;end end end end});local v27=v18:CreateButton({Name="Fake Hitstick",Callback=function()for v273,v274 in pairs(game.Players:GetPlayers()) do AnimationId="3695544849";local v275=Instance.new("Animation");v275.AnimationId="rbxassetid://"   .. AnimationId ;local v277=game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(v275);v277:Play();v277:AdjustSpeed(1);end end});local v27=v18:CreateButton({Name="Fake knee",Callback=function()for v278,v279 in pairs(game.Players:GetPlayers()) do local v280=0 -0 ;local v281;local v282;while true do if (v280==1) then v281.AnimationId="rbxassetid://"   .. AnimationId ;v282=game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(v281);v280=1 + 1 ;end if (v280==2) then v282:Play();v282:AdjustSpeed(2 -1 );break;end if (v280==(584 -(95 + 489))) then AnimationId="3695535660";v281=Instance.new("Animation");v280=1 + 0 ;end end end end});local v27=v18:CreateButton({Name="Fair Catch",Callback=function()for v283,v284 in pairs(game.Players:GetPlayers()) do AnimationId="3695548117";local v285=Instance.new("Animation");v285.AnimationId="rbxassetid://"   .. AnimationId ;local v287=game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(v285);v287:Play();v287:AdjustSpeed(1 -0 );end end});local v27=v18:CreateButton({Name="Incomplete Pass",Callback=function()for v288,v289 in pairs(game.Players:GetPlayers()) do local v290=0;local v291;local v292;while true do if (v290==(2 + 0)) then v292:Play();v292:AdjustSpeed(1 + 0 );break;end if (v290==(1123 -(256 + 867))) then AnimationId="3695542947";v291=Instance.new("Animation");v290=1;end if (1==v290) then v291.AnimationId="rbxassetid://"   .. AnimationId ;v292=game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(v291);v290=2;end end end end});local v27=v18:CreateButton({Name="Fake Block",Callback=function()for v293,v294 in pairs(game.Players:GetPlayers()) do local v295=0;local v296;local v297;while true do if (v295==(2 + 0)) then v297:Play();v297:AdjustSpeed(3 -2 );break;end if (v295==(1 + 0)) then v296.AnimationId="rbxassetid://"   .. AnimationId ;v297=game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(v296);v295=2;end if (v295==0) then AnimationId="3695551500";v296=Instance.new("Animation");v295=1 + 0 ;end end end end});local v26=v16:CreateToggle({Name="Auto Follow Player (F)",CurrentValue=false,Flag="Toggle1",Callback=function(v28)local v122=game:GetService("StarterGui");local v123=Instance.new("ScreenGui",v122);local v124=Instance.new("TextButton",v123);v124.Name="FollowButton";v124.Text="Click to auto-follow nearest player (Press F9 to toggle)";local v127=false;local v128=nil;_G[v7("\223\190\77\19\214\174\21\93\209\188","\190\203\57\124\144\193\121\49")]=function()local v298=0 + 0 ;local v299;local v300;local v301;local v302;local v303;local v304;while true do if (v298==2) then v303=math.huge;v304=nil;v298=1 + 2 ;end if (v298==1) then v301=v300.Character.HumanoidRootPart;v302=958 -(308 + 600) ;v298=2 + 0 ;end if (v298==(2 + 1)) then for v419,v420 in pairs(v299:GetPlayers()) do if (v420~=v300) then local v446=v420.Character;if (v446 and v446:FindFirstChild("HumanoidRootPart")) then local v458=(v446.HumanoidRootPart.Position-v301.Position).Magnitude;if ((v458<v303) and (v458<v302)) then v303=v458;v304=v420;end end end end if v304 then v128=v304;repeat local v447=118 -(57 + 61) ;while true do if (v447==(898 -(70 + 828))) then v300.Character.Humanoid:MoveTo(v128.Character.HumanoidRootPart.Position);wait();break;end end until (v128.Character==nil) or (v300.Character==nil) or  not v127  end v298=1 + 3 ;end if (v298==(0 + 0)) then v299=game:GetService("Players");v300=v299.LocalPlayer;v298=2 -1 ;end if (v298==4) then v128=nil;break;end end end;v124.MouseButton1Click:Connect(function()if  not v127 then v127=true;v122:SetCore("SendNotification",{Title="Auto-follow",Text="Press F to stop auto-following.",Icon="",Duration=math.huge});autoFollow();end end);game:GetService("UserInputService").InputBegan:Connect(function(v129,v130)if (v129.KeyCode==Enum.KeyCode.F) then v127= not v127;if  not v127 then v122:SetCore("SendNotification",{Title="Auto-follow",Text="Auto-following stopped.",Icon="",Duration=13 -8 });v128=nil;else local v421=0 + 0 ;while true do if (0==v421) then v122:SetCore("SendNotification",{Title="Auto-follow (F)",Text="Click on the nearest player to start auto-following them.",Icon="",Duration=math.huge});autoFollow();break;end end end end end);end});
+local Rayfield = loadstring(game:HttpGet("https://raw.githubusercontent.com/shlexware/Rayfield/main/source"))();
+local Window = Rayfield:CreateWindow({Name="FF2 script",LoadingTitle="POOG FOOG YT",LoadingSubtitle="by Poog Foog",ConfigurationSaving={Enabled=true,FolderName=Poog,FileName="Poog hub"},Discord={Enabled=false,Invite="noinvitelink",RememberJoins=true},KeySystem=false,KeySettings={Title="Sirius Hub",Subtitle="Key System",Note="Join the discord (discord.gg/sirius)",FileName="SiriusKey",SaveKey=true,GrabKeyFromSite=false,Key="Hello"}});
+local Main = Window:CreateTab("Main", 4483362458);
+local MainSection = Main:CreateSection("Main");
+local Visuals = Window:CreateTab("Visuals", 4483362458);
+local VisualsSection = Visuals:CreateSection("Visuals");
+local Player = Window:CreateTab("Player", 4483362458);
+local PlayerSection = Player:CreateSection("Player");
+local Anims = Window:CreateTab("Anims", 4483362458);
+local AnimsSection = Anims:CreateSection("Anims");
+local MainButton = Main:CreateButton({Name="Mags",Callback=function(MainSlider)
+	local MainSlider = Main:CreateSlider({Name="Mags",Range={0,30},Increment=1,Suffix="Range",CurrentValue=30,Flag="Slider1",Callback=function(maxdistance)
+		local lp = game:GetService("Players").LocalPlayer;
+		local stepped = game:GetService("RunService").Stepped;
+		local user = game:GetService("UserInputService");
+		local gui = game:GetService("GuiService");
+		local maxdistance = 30;
+		local autoclickoffset = nil;
+		local escmenu = false;
+		autoclickoffset = autoclickoffset and (autoclickoffset + maxdistance);
+		local infinite = math.huge;
+		local workspace = workspace;
+		local firetouchinterest = firetouchinterest;
+		local FindFirstChild = game.FindFirstChild;
+		local FindFirstChildOfClass = game.FindFirstChildOfClass;
+		local task = task;
+		local connect = stepped.Connect;
+		local waitfor = stepped.Wait;
+		local keypress = keypress;
+		local keyrelease = keyrelease;
+		local gettextbox = user.GetFocusedTextBox;
+		local pairs = pairs;
+		local catchparts = {"CatchRight","CatchLeft"};
+		local function resolveShortest(ball, charac)
+			local shortest, chosen = infinite, nil;
+			for i, name in pairs(catchparts) do
+				local part = FindFirstChild(charac, name);
+				local dist = (part and (part.Position - ball.Position).Magnitude) or infinite;
+				if (dist < shortest) then
+					shortest = dist;
+					chosen = part;
+				end
+			end
+			return shortest, chosen;
+		end
+		local function WaitForChildOfClass(inst, child, maxtime)
+			local timer = 0;
+			maxtime = maxtime or infinite;
+			local found = FindFirstChildOfClass(inst, child);
+			while not found and (timer < maxtime) do
+				timer = timer + task.wait();
+				found = FindFirstChildOfClass(inst, child);
+				if found then
+					return found;
+				end
+			end
+			return found;
+		end
+		connect(gui.MenuOpened, function()
+			escmenu = true;
+		end);
+		connect(gui.MenuClosed, function()
+			escmenu = false;
+		end);
+		connect(workspace.ChildAdded, function(ball)
+			if ((ball.Name == "Football") and WaitForChildOfClass(ball, "TouchTransmitter", 3)) then
+				local charac = lp.Character;
+				while (ball.Parent == workspace) and charac do
+					local dist, part = resolveShortest(ball, charac);
+					if part then
+						if (autoclickoffset and (dist <= autoclickoffset) and not (gettextbox(user) or escmenu)) then
+							keypress(67);
+							keyrelease(67);
+						end
+						if (dist <= maxdistance) then
+							firetouchinterest(part, ball, 1);
+							firetouchinterest(part, ball, 0);
+						end
+					end
+					waitfor(stepped);
+				end
+			end
+		end);
+	end});
+end});
+local MainButton = Main:CreateButton({Name="Auto Hands",Callback=function()
+	local MainSlider = Main:CreateSlider({Name="Distance of Auto hands",Range={0,20},Increment=0.1,Suffix="Distance",CurrentValue=20,Flag="Slider1",Callback=function(autoclickoffset)
+		local lp = game:GetService("Players").LocalPlayer;
+		local stepped = game:GetService("RunService").Stepped;
+		local user = game:GetService("UserInputService");
+		local gui = game:GetService("GuiService");
+		local maxdistance = 30;
+		local autoclickoffset = 20;
+		local escmenu = false;
+		autoclickoffset = autoclickoffset;
+		local infinite = math.huge;
+		local workspace = workspace;
+		local firetouchinterest = firetouchinterest;
+		local FindFirstChild = game.FindFirstChild;
+		local FindFirstChildOfClass = game.FindFirstChildOfClass;
+		local task = task;
+		local connect = stepped.Connect;
+		local waitfor = stepped.Wait;
+		local keypress = keypress;
+		local keyrelease = keyrelease;
+		local gettextbox = user.GetFocusedTextBox;
+		local pairs = pairs;
+		local catchparts = {"CatchRight","CatchLeft"};
+		local function resolveShortest(ball, charac)
+			local shortest, chosen = infinite, nil;
+			for i, name in pairs(catchparts) do
+				local part = FindFirstChild(charac, name);
+				local dist = (part and (part.Position - ball.Position).Magnitude) or infinite;
+				if (dist < shortest) then
+					shortest = dist;
+					chosen = part;
+				end
+			end
+			return shortest, chosen;
+		end
+		local function WaitForChildOfClass(inst, child, maxtime)
+			local timer = 0;
+			maxtime = maxtime or infinite;
+			local found = FindFirstChildOfClass(inst, child);
+			while not found and (timer < maxtime) do
+				timer = timer + task.wait();
+				found = FindFirstChildOfClass(inst, child);
+				if found then
+					return found;
+				end
+			end
+			return found;
+		end
+		connect(gui.MenuOpened, function()
+			escmenu = true;
+		end);
+		connect(gui.MenuClosed, function()
+			escmenu = false;
+		end);
+		connect(workspace.ChildAdded, function(ball)
+			if ((ball.Name == "Football") and WaitForChildOfClass(ball, "TouchTransmitter", 3)) then
+				local charac = lp.Character;
+				while (ball.Parent == workspace) and charac do
+					local dist, part = resolveShortest(ball, charac);
+					if part then
+						if (autoclickoffset and (dist <= autoclickoffset) and not (gettextbox(user) or escmenu)) then
+							keypress(67);
+							wait(0.8);
+							keyrelease(67);
+						end
+						if (dist <= maxdistance) then
+							firetouchinterest(part, ball, 1);
+							firetouchinterest(part, ball, 0);
+						end
+					end
+					waitfor(stepped);
+				end
+			end
+		end);
+	end});
+end});
+local VisualsButton = Visuals:CreateButton({Name="Ball predictions",Callback=function()
+	local Grapher = {};
+	Grapher.Marker = Instance.new("Part");
+	Grapher.Marker.Anchored = true;
+	Grapher.Marker.Transparency = 0.8;
+	Grapher.Marker.Color = Color3.fromRGB(255, 0, 255);
+	Grapher.Marker.CanCollide = false;
+	Grapher.Marker.Name = "Marker";
+	Grapher.Params = RaycastParams.new();
+	Grapher.Params.IgnoreWater = true;
+	Grapher.Params.FilterType = Enum.RaycastFilterType.Whitelist;
+	Grapher.CastStep = 3 / 60;
+	Grapher.LastSavedPower = 60;
+	Grapher.GetCollidables = function(self)
+		local Collidables = {};
+		for _, BasePart in ipairs(workspace:GetDescendants()) do
+			if (BasePart:IsA("BasePart") and (BasePart.CanCollide == true)) then
+				table.insert(Collidables, BasePart);
+			end
+		end
+		return Collidables;
+	end;
+	Grapher.WipeMarkers = function(self)
+		for i, v in pairs(workspace:GetChildren()) do
+			if (v.Name == "Marker") then
+				v:Destroy();
+			end
+		end
+	end;
+	Grapher.GetLanding = function(self, origin, velocity, c)
+		local Elapsed = 0;
+		local LastPos = origin;
+		self.Params.FilterDescendantsInstances = self:GetCollidables();
+		local Football_Highlight;
+		if c then
+			Football_Highlight = Instance.new("Highlight", game.CoreGui);
+			Football_Highlight.Adornee = c;
+			Football_Highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop;
+			Football_Highlight.Enabled = true;
+		end
+		while true do
+			Elapsed += Grapher.CastStep
+			local nPos = (origin + (velocity * Elapsed)) - Vector3.new(0, 0.5 * 28 * (Elapsed ^ 2), 0);
+			local Marker = self.Marker:Clone();
+			Marker.Parent = workspace;
+			Marker.Position = nPos;
+			if ((c and Football_Highlight and (c.Parent ~= workspace)) or (c and not c:FindFirstChildOfClass("BodyForce"))) then
+				Football_Highlight:Destroy();
+				self:WipeMarkers();
+				break;
+			end
+			task.wait();
+		end
+	end;
+	do
+		workspace.ChildAdded:Connect(function(child)
+			if ((child.Name == "Football") and child:IsA("BasePart")) then
+				local tempCon;
+				tempCon = child:GetPropertyChangedSignal("Velocity"):Connect(function()
+					Grapher:GetLanding(child.Position, child.Velocity, child);
+					tempCon:Disconnect();
+				end);
+			end
+		end);
+	end
+	return Grapher;
+end});
+local VisualsButton = Visuals:CreateButton({Name="Fps boost",Callback=function()
+	local decalsyeeted = true;
+	local g = game;
+	local w = g.Workspace;
+	local l = g.Lighting;
+	local t = w.Terrain;
+	t.WaterWaveSize = 0;
+	t.WaterWaveSpeed = 0;
+	t.WaterReflectance = 0;
+	t.WaterTransparency = 0;
+	l.GlobalShadows = false;
+	l.FogEnd = 8999999488;
+	l.Brightness = 0;
+	settings().Rendering.QualityLevel = "Level01";
+	for i, v in pairs(g:GetDescendants()) do
+		if (v:IsA("Part") or v:IsA("Union") or v:IsA("CornerWedgePart") or v:IsA("TrussPart")) then
+			v.Material = "Plastic";
+			v.Reflectance = 0;
+		elseif (v:IsA("Decal") or (v:IsA("Texture") and decalsyeeted)) then
+			v.Transparency = 1;
+		elseif (v:IsA("ParticleEmitter") or v:IsA("Trail")) then
+			v.Lifetime = NumberRange.new(0);
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1;
+			v.BlastRadius = 1;
+		elseif (v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke")) then
+			v.Enabled = false;
+		elseif v:IsA("MeshPart") then
+			v.Material = "Plastic";
+			v.Reflectance = 0;
+			v.TextureID = 10385902758728956;
+		end
+	end
+	for i, e in pairs(l:GetChildren()) do
+		if (e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect")) then
+			e.Enabled = false;
+		end
+	end
+end});
+local VisualsButton = Visuals:CreateButton({Name="Skeletons",Callback=function()
+	game:GetService("StarterGui"):SetCore("SendNotification", {Title="Made By:",Text="Poog Foog",Icon="",Duration=20});
+	local camera = workspace.CurrentCamera;
+	local entities = game:GetService("Players");
+	local localplayer = entities.LocalPlayer;
+	local runservice = game:GetService("RunService");
+	local esp_settings = {enabled=true,skel=true,skel_col=Color3.fromRGB(204, 0, 204)};
+	local function draw(player, character)
+		local skel_head = Drawing.new("Line");
+		skel_head.Visible = false;
+		skel_head.Thickness = 3;
+		skel_head.Color = Color3.new(0, 0, 0);
+		local skel_torso = Drawing.new("Line");
+		skel_torso.Visible = false;
+		skel_torso.Thickness = 3;
+		skel_torso.Color = Color3.new(0, 0, 0);
+		local skel_leftarm = Drawing.new("Line");
+		skel_leftarm.Visible = false;
+		skel_leftarm.Thickness = 3;
+		skel_leftarm.Color = Color3.new(0, 0, 0);
+		local skel_rightarm = Drawing.new("Line");
+		skel_rightarm.Visible = false;
+		skel_rightarm.Thickness = 3;
+		skel_rightarm.Color = Color3.new(0, 0, 0);
+		local skel_leftleg = Drawing.new("Line");
+		skel_leftleg.Visible = false;
+		skel_leftleg.Thickness = 3;
+		skel_leftleg.Color = Color3.new(0, 0, 0);
+		local skel_rightleg = Drawing.new("Line");
+		skel_rightleg.Visible = false;
+		skel_rightleg.Thickness = 3;
+		skel_rightleg.Color = Color3.new(0, 0, 0);
+		local function update()
+			local connection;
+			connection = runservice.RenderStepped:Connect(function()
+				if (workspace:FindFirstChild(character.Name) and character and character:FindFirstChild("HumanoidRootPart") and character:FindFirstChild("Humanoid") and (character:FindFirstChild("Humanoid").Health ~= 0)) then
+					local character_rootpart_3d = character.HumanoidRootPart.Position;
+					local character_rootpart_2d, rootpart_onscreen = camera:WorldToViewportPoint(character_rootpart_3d);
+					if (rootpart_onscreen and (character.Humanoid.RigType == Enum.HumanoidRigType.R6) and esp_settings.enabled) then
+						local head_2d = camera:WorldToViewportPoint(character.Head.Position);
+						local torso_upper_2d = camera:WorldToViewportPoint(character.Torso.Position + Vector3.new(0, 1, 0));
+						local torso_lower_2d = camera:WorldToViewportPoint(character.Torso.Position + Vector3.new(0, -1, 0));
+						local leftarm_2d = camera:WorldToViewportPoint(character["Left Arm"].Position + Vector3.new(0, -1, 0));
+						local rightarm_2d = camera:WorldToViewportPoint(character["Right Arm"].Position + Vector3.new(0, -1, 0));
+						local leftleg_2d = camera:WorldToViewportPoint(character["Left Leg"].Position + Vector3.new(0, -1, 0));
+						local rightleg_2d = camera:WorldToViewportPoint(character["Right Leg"].Position + Vector3.new(0, -1, 0));
+						skel_head.From = Vector2.new(head_2d.X, head_2d.Y);
+						skel_head.To = Vector2.new(torso_upper_2d.X, torso_upper_2d.Y);
+						skel_torso.From = Vector2.new(torso_upper_2d.X, torso_upper_2d.Y);
+						skel_torso.To = Vector2.new(torso_lower_2d.X, torso_lower_2d.Y);
+						skel_leftarm.From = Vector2.new(torso_upper_2d.X, torso_upper_2d.Y);
+						skel_leftarm.To = Vector2.new(leftarm_2d.X, leftarm_2d.Y);
+						skel_rightarm.From = Vector2.new(torso_upper_2d.X, torso_upper_2d.Y);
+						skel_rightarm.To = Vector2.new(rightarm_2d.X, rightarm_2d.Y);
+						skel_leftleg.From = Vector2.new(torso_lower_2d.X, torso_lower_2d.Y);
+						skel_leftleg.To = Vector2.new(leftleg_2d.X, leftleg_2d.Y);
+						skel_rightleg.From = Vector2.new(torso_lower_2d.X, torso_lower_2d.Y);
+						skel_rightleg.To = Vector2.new(rightleg_2d.X, rightleg_2d.Y);
+						skel_head.Visible = esp_settings.skel;
+						skel_torso.Visible = esp_settings.skel;
+						skel_leftarm.Visible = esp_settings.skel;
+						skel_rightarm.Visible = esp_settings.skel;
+						skel_leftleg.Visible = esp_settings.skel;
+						skel_rightleg.Visible = esp_settings.skel;
+					else
+						skel_head.Visible = false;
+						skel_torso.Visible = false;
+						skel_leftarm.Visible = false;
+						skel_rightarm.Visible = false;
+						skel_leftleg.Visible = false;
+						skel_rightleg.Visible = false;
+					end
+				else
+					if (player == nil) then
+						connection:Disconnect();
+						connection = nil;
+					end
+					skel_head.Visible = false;
+					skel_torso.Visible = false;
+					skel_leftarm.Visible = false;
+					skel_rightarm.Visible = false;
+					skel_leftleg.Visible = false;
+					skel_rightleg.Visible = false;
+				end
+			end);
+		end
+		coroutine.wrap(update)();
+	end
+	local function playeradded(player)
+		if player.Character then
+			coroutine.wrap(draw)(player, player.Character);
+		end
+		player.CharacterAdded:Connect(function(character)
+			coroutine.wrap(draw)(player, character);
+		end);
+	end
+	for a, b in next, entities:GetPlayers() do
+		if (b ~= localplayer) then
+			playeradded(b);
+		end
+	end
+	entities.PlayerAdded:Connect(playeradded);
+end});
+local VisualsToggle = Visuals:CreateToggle({Name="Qb Football Trajectory",CurrentValue=false,Flag="Toggle1",Callback=function(Trajectory)
+	local TERRAIN = game.Workspace.Terrain;
+	local BEAM = Instance.new("Beam");
+	BEAM.Color = ColorSequence.new(Color3.new(1, 0, 1));
+	BEAM.Transparency = NumberSequence.new(0);
+	BEAM.FaceCamera = true;
+	BEAM.Segments = 20;
+	BEAM.Width0 = 0.4;
+	BEAM.Width1 = 0.4;
+	local Trajectory = {};
+	Trajectory.__index = Trajectory;
+	local function reflect(v, n)
+		return (-2 * v:Dot(n) * n) + v;
+	end
+	local function drawBeamProjectile(g, v0, x0, t)
+		local c = 0.5 * 0.5 * 0.5;
+		local p3 = (0.5 * g * t * t) + (v0 * t) + x0;
+		local p2 = p3 - (((g * t * t) + (v0 * t)) / 3);
+		local p1 = ((((c * g * t * t) + (0.5 * v0 * t) + x0) - (c * (x0 + p3))) / (3 * c)) - p2;
+		local curve0 = (p1 - x0).Magnitude;
+		local curve1 = (p2 - p3).Magnitude;
+		local b = (x0 - p3).unit;
+		local r1 = (p1 - x0).unit;
+		local u1 = r1:Cross(b).unit;
+		local r2 = (p2 - p3).unit;
+		local u2 = r2:Cross(b).unit;
+		b = u1:Cross(r1).unit;
+		local cfA = CFrame.fromMatrix(x0, r1, u1, b);
+		local cfB = CFrame.fromMatrix(p3, r2, u2, b);
+		local A0 = Instance.new("Attachment");
+		local A1 = Instance.new("Attachment");
+		local Beam = BEAM:Clone();
+		A0.CFrame = cfA;
+		A0.Parent = TERRAIN;
+		A1.CFrame = cfB;
+		A1.Parent = TERRAIN;
+		Beam.Attachment0 = A0;
+		Beam.Attachment1 = A1;
+		Beam.CurveSize0 = curve0;
+		Beam.CurveSize1 = -curve1;
+		Beam.Parent = TERRAIN;
+	end
+	local Trajectory = {};
+	Trajectory.__index = Trajectory;
+	local function reflect(v, n)
+		return (-2 * v:Dot(n) * n) + v;
+	end
+	local function drawBeamProjectile(g, v0, x0, t)
+		local c = 0.5 * 0.5 * 0.5;
+		local p3 = (0.5 * g * t * t) + (v0 * t) + x0;
+		local p2 = p3 - (((g * t * t) + (v0 * t)) / 3);
+		local p1 = ((((c * g * t * t) + (0.5 * v0 * t) + x0) - (c * (x0 + p3))) / (3 * c)) - p2;
+		local curve0 = (p1 - x0).Magnitude;
+		local curve1 = (p2 - p3).Magnitude;
+		local b = (x0 - p3).unit;
+		local r1 = (p1 - x0).unit;
+		local u1 = r1:Cross(b).unit;
+		local r2 = (p2 - p3).unit;
+		local u2 = r2:Cross(b).unit;
+		b = u1:Cross(r1).unit;
+		local cfA = CFrame.fromMatrix(x0, r1, u1, b);
+		local cfB = CFrame.fromMatrix(p3, r2, u2, b);
+		local A0 = Instance.new("Attachment");
+		local A1 = Instance.new("Attachment");
+		local Beam = BEAM:Clone();
+		A0.CFrame = cfA;
+		A0.Parent = TERRAIN;
+		A1.CFrame = cfB;
+		A1.Parent = TERRAIN;
+		Beam.Attachment0 = A0;
+		Beam.Attachment1 = A1;
+		Beam.CurveSize0 = curve0;
+		Beam.CurveSize1 = -curve1;
+		Beam.Parent = TERRAIN;
+	end
+	Trajectory.new = function(gravity)
+		local self = setmetatable({}, Trajectory);
+		self.Gravity = gravity;
+		self.TimeStep = 0.1;
+		self.MaxTime = 3;
+		self.MinSpeed = 15;
+		self.MaxBounce = 0;
+		return self;
+	end;
+	Trajectory.Velocity = function(self, v0, t)
+		return (self.Gravity * t) + v0;
+	end;
+	Trajectory.Position = function(self, x0, v0, t)
+		return (0.5 * self.Gravity * t * t) + (v0 * t) + x0;
+	end;
+	Trajectory.PlaneQuadraticIntersection = function(self, x0, v0, p, n)
+		local a = (0.5 * self.Gravity):Dot(n);
+		local b = v0:Dot(n);
+		local c = (x0 - p):Dot(n);
+		if (a ~= 0) then
+			local d = math.sqrt((b * b) - (4 * a * c));
+			return (-b - d) / (2 * a);
+		else
+			return -c / b;
+		end
+	end;
+	Trajectory.CalculateSingle = function(self, x0, v0, ignoreList)
+		local t = 0;
+		local hit, pos, normal, material;
+		repeat
+			local p0 = self:Position(x0, v0, t);
+			local p1 = self:Position(x0, v0, t + self.TimeStep);
+			t = t + self.TimeStep;
+			local ray = Ray.new(p0, p1 - p0);
+			hit, pos, normal, material = game.Workspace:FindPartOnRayWithIgnoreList(ray, ignoreList, false, true);
+		until hit or (t >= self.MaxTime) 
+		if hit then
+			if ((hit.CanCollide == false) and not table.find(ignoreList, hit)) then
+				table.insert(ignoreList, hit);
+			end
+			local t = self:PlaneQuadraticIntersection(x0, v0, pos, normal);
+			local x1 = self:Position(x0, v0, t);
+			return t, normal, PhysicalProperties.new(material);
+		end
+	end;
+	Trajectory.Cast = function(self, x0, v0, material, ignoreList)
+		local bounce = 0;
+		local t, x1, normal, pB;
+		local speed2 = self.MinSpeed * self.MinSpeed;
+		local pA = PhysicalProperties.new(material);
+		local path = {};
+		while (v0:Dot(v0) >= speed2) and (bounce <= self.MaxBounce) do
+			t, normal, pB = self:CalculateSingle(x0, v0, ignoreList);
+			if t then
+				table.insert(path, {x0,v0,t});
+				local elast = ((pA.Elasticity * pA.ElasticityWeight) + (pB.Elasticity * pB.ElasticityWeight)) / (pA.ElasticityWeight + pB.ElasticityWeight);
+				local frict = ((pA.Friction * pA.FrictionWeight) + (pB.Friction * pB.FrictionWeight)) / (pA.FrictionWeight + pB.FrictionWeight);
+				local dot = 1 - math.abs(v0.Unit:Dot(normal));
+				print(dot);
+				x0 = self:Position(x0, v0, t);
+				v0 = (reflect(self:Velocity(v0, t), normal) * elast) + (v0 * frict * dot);
+				bounce = bounce + 1;
+			else
+				bounce = self.MaxBounce + 1;
+			end
+		end
+		return path;
+	end;
+	Trajectory.Draw = function(self, path)
+		for i = 1, #path do
+			local x0, v0, t = unpack(path[i]);
+			drawBeamProjectile(self.Gravity, v0, x0, t);
+		end
+	end;
+	local LocalPlayer = game:GetService("Players").LocalPlayer;
+	local trajectory = Trajectory.new(Vector3.new(0, -28.5, 0));
+	local origin = LocalPlayer.Character:WaitForChild("Head");
+	local mouse = LocalPlayer:GetMouse();
+	local ignoreList = {game.Workspace.Terrain,LocalPlayer.Character};
+	local pause = false;
+	game:GetService("RunService").RenderStepped:Connect(function(dt)
+		if not pause then
+			game.Workspace.Terrain:ClearAllChildren();
+			if LocalPlayer.Character:FindFirstChild("Football") then
+				local speed = (LocalPlayer.PlayerGui:FindFirstChild("BallGui") and tonumber(LocalPlayer.PlayerGui.BallGui.Frame.Disp.Text)) or 60;
+				local dir = (mouse.Hit.p - (origin.CFrame + Vector3.new(0, 1, 0)).p).Unit;
+				local x0 = origin.Position + (dir * 2);
+				local v0 = dir * speed;
+				local path = trajectory:Cast(x0, v0, Enum.Material.Plastic, ignoreList);
+				trajectory:Draw(path);
+			end
+		end
+	end);
+	game:GetService("UserInputService").InputBegan:Connect(function(input)
+		if ((input.UserInputType == Enum.UserInputType.MouseButton1) and not pause) then
+			pause = true;
+			task.delay(3, function()
+				pause = false;
+			end);
+		end
+	end);
+end});
+local PlayerToggle = Player:CreateToggle({Name="inf jump (banable)",CurrentValue=false,Flag="Toggle1",Callback=function(act, inp, obj)
+	wait(1);
+	local ver = "2.00";
+	local scriptname = "Poog Hub infjump";
+	local AirjumpKey = Enum.KeyCode.Space;
+	local ca = game:GetService("ContextActionService");
+	local zeezy = game:GetService("Players").LocalPlayer;
+	local h = 0.0174533;
+	local antigrav;
+	zeezyAirjump = function(act, inp, obj)
+		if (inp == Enum.UserInputState.Begin) then
+			repeat
+				zeezy.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Seated");
+				wait();
+				zeezy.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping");
+			until true 
+		end
+	end;
+	ca:BindAction("zeezyAirjump", zeezyAirjump, false, AirjumpKey);
+	print(scriptname .. " " .. ver .. " loaded successfully");
+	print("made by frog#8472");
+	local notifSound = Instance.new("Sound", workspace);
+	notifSound.PlaybackSpeed = 1.5;
+	notifSound.Volume = 0.15;
+	notifSound.SoundId = "rbxassetid://170765130";
+	notifSound.PlayOnRemove = true;
+	notifSound:Destroy();
+	game.StarterGui:SetCore("SendNotification", {Title="Poog Hub",Text="Poog foog inf jump loaded ",Icon="rbxassetid://505845268",Duration=800,Button1="Okay"});
+end});
+local AnimsButton = Anims:CreateButton({Name="Fake Kick",Callback=function()
+	for i, v in pairs(game.Players:GetPlayers()) do
+		AnimationId = "3695538622";
+		local Anim = Instance.new("Animation");
+		Anim.AnimationId = "rbxassetid://" .. AnimationId;
+		local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim);
+		k:Play();
+		k:AdjustSpeed(1);
+	end
+end});
+local AnimsButton = Anims:CreateButton({Name="Fake Pass",Callback=function()
+	for i, v in pairs(game.Players:GetPlayers()) do
+		AnimationId = "3695532114";
+		local Anim = Instance.new("Animation");
+		Anim.AnimationId = "rbxassetid://" .. AnimationId;
+		local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim);
+		k:Play();
+		k:AdjustSpeed(1);
+	end
+end});
+local AnimsButton = Anims:CreateButton({Name="Fake Dab",Callback=function()
+	for i, v in pairs(game.Players:GetPlayers()) do
+		AnimationId = "3695549792";
+		local Anim = Instance.new("Animation");
+		Anim.AnimationId = "rbxassetid://" .. AnimationId;
+		local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim);
+		k:Play();
+		k:AdjustSpeed(1);
+	end
+end});
+local AnimsButton = Anims:CreateButton({Name="Fake Hitstick",Callback=function()
+	for i, v in pairs(game.Players:GetPlayers()) do
+		AnimationId = "3695544849";
+		local Anim = Instance.new("Animation");
+		Anim.AnimationId = "rbxassetid://" .. AnimationId;
+		local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim);
+		k:Play();
+		k:AdjustSpeed(1);
+	end
+end});
+local AnimsButton = Anims:CreateButton({Name="Fake knee",Callback=function()
+	for i, v in pairs(game.Players:GetPlayers()) do
+		AnimationId = "3695535660";
+		local Anim = Instance.new("Animation");
+		Anim.AnimationId = "rbxassetid://" .. AnimationId;
+		local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim);
+		k:Play();
+		k:AdjustSpeed(1);
+	end
+end});
+local AnimsButton = Anims:CreateButton({Name="Fair Catch",Callback=function()
+	for i, v in pairs(game.Players:GetPlayers()) do
+		AnimationId = "3695548117";
+		local Anim = Instance.new("Animation");
+		Anim.AnimationId = "rbxassetid://" .. AnimationId;
+		local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim);
+		k:Play();
+		k:AdjustSpeed(1);
+	end
+end});
+local AnimsButton = Anims:CreateButton({Name="Incomplete Pass",Callback=function()
+	for i, v in pairs(game.Players:GetPlayers()) do
+		AnimationId = "3695542947";
+		local Anim = Instance.new("Animation");
+		Anim.AnimationId = "rbxassetid://" .. AnimationId;
+		local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim);
+		k:Play();
+		k:AdjustSpeed(1);
+	end
+end});
+local AnimsButton = Anims:CreateButton({Name="Fake Block",Callback=function()
+	for i, v in pairs(game.Players:GetPlayers()) do
+		AnimationId = "3695551500";
+		local Anim = Instance.new("Animation");
+		Anim.AnimationId = "rbxassetid://" .. AnimationId;
+		local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim);
+		k:Play();
+		k:AdjustSpeed(1);
+	end
+end});
+local PlayerToggle = Player:CreateToggle({Name="Auto Follow Player (F)",CurrentValue=false,Flag="Toggle1",Callback=function(isFollowing)
+	local StarterGui = game:GetService("StarterGui");
+	local ScreenGui = Instance.new("ScreenGui", StarterGui);
+	local FollowButton = Instance.new("TextButton", ScreenGui);
+	FollowButton.Name = "FollowButton";
+	FollowButton.Text = "Click to auto-follow nearest player (Press F9 to toggle)";
+	local isFollowing = false;
+	local followPlayer = nil;
+	autoFollow = function()
+		local Players = game:GetService("Players");
+		local LocalPlayer = Players.LocalPlayer;
+		local HumanoidRootPart = LocalPlayer.Character.HumanoidRootPart;
+		local MaxDist = 50;
+		local MinDist = math.huge;
+		local ClosestPlayer = nil;
+		for i, player in pairs(Players:GetPlayers()) do
+			if (player ~= LocalPlayer) then
+				local Character = player.Character;
+				if (Character and Character:FindFirstChild("HumanoidRootPart")) then
+					local Dist = (Character.HumanoidRootPart.Position - HumanoidRootPart.Position).Magnitude;
+					if ((Dist < MinDist) and (Dist < MaxDist)) then
+						MinDist = Dist;
+						ClosestPlayer = player;
+					end
+				end
+			end
+		end
+		if ClosestPlayer then
+			followPlayer = ClosestPlayer;
+			repeat
+				LocalPlayer.Character.Humanoid:MoveTo(followPlayer.Character.HumanoidRootPart.Position);
+				wait();
+			until (followPlayer.Character == nil) or (LocalPlayer.Character == nil) or not isFollowing 
+		end
+		followPlayer = nil;
+	end;
+	FollowButton.MouseButton1Click:Connect(function()
+		if not isFollowing then
+			isFollowing = true;
+			StarterGui:SetCore("SendNotification", {Title="Auto-follow",Text="Press F to stop auto-following.",Icon="",Duration=math.huge});
+			autoFollow();
+		end
+	end);
+	game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
+		if (input.KeyCode == Enum.KeyCode.F) then
+			isFollowing = not isFollowing;
+			if not isFollowing then
+				StarterGui:SetCore("SendNotification", {Title="Auto-follow",Text="Auto-following stopped.",Icon="",Duration=5});
+				followPlayer = nil;
+			else
+				StarterGui:SetCore("SendNotification", {Title="Auto-follow (F)",Text="Click on the nearest player to start auto-following them.",Icon="",Duration=math.huge});
+				autoFollow();
+			end
+		end
+	end);
+end});
